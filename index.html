@@ -33,7 +33,7 @@ p{line-height:1.65}
 .btn.alt{background:#f1d4bc;color:#71342f;box-shadow:0 7px 0 #d1a98f}
 .buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
 .heart{position:absolute;font-size:28px;animation:float 4s ease-in-out infinite}
-.h1{left:12%;top:15%}.h2{right:10%;top:25%;animation-delay:1s}.h3{left:18%;bottom:18%;animation-delay:2s}.h4{right:15%;bottom:13%;animation-delay:1.4s}
+.h1{left:12%;top:15%}.h4{right:15%;bottom:13%;animation-delay:1.4s}
 @keyframes float{50%{transform:translateY(-13px) rotate(8deg)}}
 
 .petals{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
@@ -44,17 +44,17 @@ p{line-height:1.65}
 .dots span{width:6px;height:6px;border-radius:50%;background:#e0c7b1;transition:.25s}
 .dots span.on{background:#a94139;width:16px;border-radius:4px}
 
-.hero-art{width:170px;height:170px;margin:24px auto 18px;position:relative}
-.circle{position:absolute;inset:7px;border-radius:50%;background:#f1cdb2;border:3px dashed #a94139}
-.face{position:absolute;width:106px;height:90px;background:#d88e68;border-radius:50% 50% 43% 43%;left:32px;top:44px}
-.hair{position:absolute;width:114px;height:62px;background:#3d2926;border-radius:60px 60px 25px 25px;left:28px;top:30px}
-.eye{position:absolute;width:7px;height:11px;background:#332321;border-radius:50%;top:78px}
-.eye.a{left:63px}.eye.b{left:100px}
-.mouth{position:absolute;width:23px;height:12px;border-bottom:3px solid #6d302d;border-radius:0 0 50% 50%;left:73px;top:100px}
-.flower{position:absolute;font-size:42px}
-.flower.a{left:2px;top:3px}.flower.b{right:0;bottom:2px}
 .pulse{animation:pulse 1.6s infinite}
 @keyframes pulse{50%{transform:scale(1.05)}}
+
+.hero-photo{width:160px;height:160px;margin:22px auto 20px;position:relative}
+.hero-photo .ring{position:absolute;inset:-8px;border-radius:50%;border:3px dashed #c2685c;opacity:.6}
+.hero-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 25%;display:block;border:5px solid #fff;box-shadow:0 12px 26px rgba(70,42,27,.28)}
+.hero-photo .deco{position:absolute;font-size:30px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.12))}
+.hero-photo .deco.a{left:-10px;top:-6px}
+.hero-photo .deco.b{right:-12px;bottom:-4px}
+
+.warn-pill{display:inline-flex;align-items:center;gap:6px;background:#f6d9c6;color:#8a3a30;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:999px;box-shadow:0 3px 0 #d9b190}
 
 .certificate{margin:24px 4px;padding:26px 18px;border:2px solid #b55b50;outline:1px dashed #b55b50;outline-offset:-9px;background:#fff8ef;box-shadow:7px 8px 0 #e5cdb7;position:relative}
 .badge{width:70px;height:70px;margin:0 auto 14px;border-radius:50%;background:#d99b55;border:6px double #9b6030;display:grid;place-items:center;font-size:30px;animation:spin-in 1s ease}
@@ -83,7 +83,7 @@ p{line-height:1.65}
 .confetti{position:absolute;width:8px;height:12px;top:-20px;opacity:0;animation:fall 3s ease-in forwards}
 @keyframes fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:.9;transform:translateY(115vh) rotate(540deg)}}
 
-@media(max-height:740px){.paper{min-height:calc(100svh - 30px);padding-top:30px}.hero-art{margin:16px auto 12px;height:140px}.certificate{margin-top:14px}.strip-wrap{margin-top:14px}.frame img{height:150px}}
+@media(max-height:740px){.paper{min-height:calc(100svh - 30px);padding-top:30px}.hero-photo{margin:14px auto 12px;width:130px;height:130px}.certificate{margin-top:14px}.strip-wrap{margin-top:14px}.frame img{height:150px}}
 </style>
 </head>
 <body>
@@ -92,15 +92,20 @@ p{line-height:1.65}
 <div class="paper">
 <div class="checker"></div><div class="checker bottom"></div>
 <div class="petals" id="petals-1"></div>
-<div class="heart h1">♡</div><div class="heart h2">♥</div><div class="heart h3">♡</div><div class="heart h4">♥</div>
-<div class="content" style="padding-top:60px">
-<div class="kicker">⚠ warning: emotional content ahead</div>
-<div class="hero-art pulse"><div class="circle"></div><div class="hair"></div><div class="face"></div><div class="eye a"></div><div class="eye b"></div><div class="mouth"></div><div class="flower a">🌼</div><div class="flower b">🌸</div></div>
-<div class="big-hand">Uh oh, Priya...</div>
-<h1>I made you<br>a whole website.</h1>
-<p>Yes, an actual website. No, you cannot un-see it. Proceed at your own emotional risk.</p>
-<button class="btn" onclick="go(2)">OPEN IF YOU DARE ♡</button>
-<div class="footer-note">Built with love, snacks, and mild sibling rivalry.</div>
+<div class="heart h1">♡</div><div class="heart h4">♥</div>
+<div class="content" style="padding-top:56px">
+<div class="warn-pill">for priya, with love</div>
+<div class="hero-photo pulse">
+<div class="ring"></div>
+<img src="priya-2.jpg" alt="Priya">
+<div class="deco a">🌼</div>
+<div class="deco b">🌸</div>
+</div>
+<div class="big-hand">Hey, Priya!</div>
+<h1>I made you<br>a little something.</h1>
+<p>A few photos, a few words, and one very biased certificate. Ready?</p>
+<button class="btn" onclick="go(2)">OPEN IT ♡</button>
+<div class="footer-note">Handled with love (and minor bribery).</div>
 </div></div>
 </section>
 
@@ -149,10 +154,10 @@ p{line-height:1.65}
 <p class="hand" style="font-size:23px;margin:0">A totally unbiased museum of her greatness. ♡</p>
 <div class="strip-wrap">
 <div class="strip">
-<div class="frame"><div class="tape"></div><img src="Priya 1.jpg" alt="Priya photo"><div class="cap">iconic pose #47</div></div>
-<div class="frame"><div class="tape"></div><img src="Priya 2.jpg" alt="Priya photo"><div class="cap">"no filter needed" — she said, correctly</div></div>
-<div class="frame"><div class="tape"></div><img src="Priya 3.jpg" alt="Priya photo"><div class="cap">future Vogue: Punjab edition</div></div>
-<div class="frame"><div class="tape"></div><img src="Priya 4.jpg" alt="Priya photo"><div class="cap">certified camera magnet</div></div>
+<div class="frame"><div class="tape"></div><img src="priya-1.jpg" alt="Priya photo"><div class="cap">iconic pose #47</div></div>
+<div class="frame"><div class="tape"></div><img src="priya-2.jpg" alt="Priya photo"><div class="cap">"no filter needed" — she said, correctly</div></div>
+<div class="frame"><div class="tape"></div><img src="priya-3.jpg" alt="Priya photo"><div class="cap">future Vogue: Punjab edition</div></div>
+<div class="frame"><div class="tape"></div><img src="priya-4.jpg" alt="Priya photo"><div class="cap">certified camera magnet</div></div>
 </div>
 </div>
 <p class="footer-note">Fun fact: 9 out of 10 photos on my phone are her. The 10th is a screenshot of something she sent me.</p>
